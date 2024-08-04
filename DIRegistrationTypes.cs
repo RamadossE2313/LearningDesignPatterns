@@ -17,3 +17,8 @@ services.AddScoped(svc =>
 {
     return new XmlReportGenerator();
 });
+
+services.AddScoped(typeof(IReportGenerator), svc =>
+{
+    return new XmlReportGenerator();
+});
